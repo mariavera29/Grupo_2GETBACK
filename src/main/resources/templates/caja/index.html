@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Back - Panel de Cajero</title>
+    <link rel="stylesheet" href="/caja/style/panel_caja.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <!-- Barra lateral de navegación ampliada -->
+        <nav class="barra-lateral">
+            <div class="cabecera-barra">
+                <div class="logo-titulo">
+                    <img src="../imgs/Logo_principal.png" alt="Logo Get Back" class="logo-negocio">
+                    <div>
+                        <h2>Get Back</h2>
+                        <p>Panel de Cajero</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-navegacion">
+                <!-- Sección Principal -->
+                <a href="#inicio-caja" class="item-menu">
+                    <i class="fas fa-home"></i> Inicio Caja
+                </a>
+                <a href="#punto-venta" class="item-menu">
+                    <i class="fas fa-cash-register"></i> Punto de Venta
+                </a>
+                <a href="#ventas-rapidas" class="item-menu">
+                    <i class="fas fa-bolt"></i> Ventas Rápidas
+                </a>
+                
+                <!-- Gestión de Pedidos -->
+                <a href="#pedidos-activos" class="item-menu">
+                    <i class="fas fa-clipboard-list"></i> Pedidos Activos
+                </a>
+                <a href="#pedidos-pendientes" class="item-menu">
+                    <i class="fas fa-clock"></i> Pedidos Pendientes
+                </a>
+                <a href="#pedidos-completados" class="item-menu">
+                    <i class="fas fa-check-circle"></i> Pedidos Completados
+                </a>
+                <a href="#devoluciones" class="item-menu">
+                    <i class="fas fa-exchange-alt"></i> Devoluciones
+                </a>
+                
+                <!-- Gestión de Clientes -->
+                <a href="#clientes-frecuentes" class="item-menu">
+                    <i class="fas fa-star"></i> Clientes Frecuentes
+                </a>
+                <a href="#reservaciones" class="item-menu">
+                    <i class="fas fa-calendar-check"></i> Reservaciones
+                </a>
+                <a href="#fichas-clientes" class="item-menu">
+                    <i class="fas fa-address-card"></i> Fichas Clientes
+                </a>
+                
+        
+                </a>
+                <a href="#reportes-diarios" class="item-menu">
+                    <i class="fas fa-chart-line"></i> Reportes Diarios
+                </a>
+                <a href="#cierre-caja" class="item-menu">
+                    <i class="fas fa-lock"></i> Cierre de Caja
+                </a>
+                
+                <!-- Gestión de Productos -->
+                <a href="#inventario" class="item-menu">
+                    <i class="fas fa-clipboard-check"></i> Inventario
+                </a>
+                <a href="#productos-populares" class="item-menu">
+                    <i class="fas fa-fire"></i> Productos Populares
+                </a>
+                <a href="#combos" class="item-menu">
+                    <i class="fas fa-layer-group"></i> Combos
+                </a>
+                <a href="#promociones" class="item-menu">
+                    <i class="fas fa-percentage"></i> Promociones
+                </a>
+                
+                <!-- Configuración y Administración -->
+                <a href="#configuracion" class="item-menu">
+                    <i class="fas fa-cog"></i> Configuración
+                </a>
+                <a href="#turnos" class="item-menu">
+                    <i class="fas fa-user-clock"></i> Turnos
+                </a>
+            </div>
+            
+            <div class="pie-barra">
+                <div class="info-usuario">
+                    <img src="..//imgs/logo get back.png" alt="Cajero">
+                    <div>
+                        <span>Cajero: Helena Alfonso</span>
+                        <div class="estado-conexion">
+                            <i class="fas fa-circle conexion-activa"></i>
+                            <span>En línea</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="boton boton-secundario boton-pequeno">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
+            </div>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="contenido-principal">
+            <!-- Sección Inicio de Caja -->
+            <section id="inicio-caja" class="seccion-contenido visible">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-home"></i> Inicio de Caja</h1>
+                    <div class="info-caja">
+                        <i class="fas fa-circle"></i> Hola! Caja activa
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-info-circle"></i> Estado de Caja</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="item-info">
+                                <span class="etiqueta-info">Cajero:</span>
+                                <span class="valor-info">Helena Alfonso</span>
+                            </div>
+                            <div class="item-info">
+                                <span class="etiqueta-info">Fecha:</span>
+                                <span class="valor-info">10/07/2025</span>
+                            </div>
+                            <div class="item-info">
+                                <span class="etiqueta-info">Hora de Apertura:</span>
+                                <span class="valor-info">--:--</span>
+                            </div>
+                            <div class="item-info">
+                                <span class="etiqueta-info">Estado:</span>
+                                <span class="badge-estado badge-pendiente">No iniciada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-coins"></i> Fondos Iniciales</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <form class="formulario">
+                                <div class="grupo-formulario">
+                                    <label for="efectivo-inicial">Efectivo Inicial:</label>
+                                    <input type="number" id="efectivo-inicial" class="control-formulario" placeholder="0.00" step="0.01" min="0" required>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="notas-cajero">Notas:</label>
+                                    <textarea id="notas-cajero" class="control-formulario" rows="3" placeholder="Observaciones..."></textarea>
+                                </div>
+                                <button type="submit" class="boton boton-primario">
+                                    <i class="fas fa-lock-open"></i> Iniciar Caja
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Punto de Venta -->
+            <section id="punto-venta" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-cash-register"></i> Punto de Venta</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-secundario boton-pequeno">
+                            <i class="fas fa-sync-alt"></i> Actualizar
+                        </button>
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nuevo Producto
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-pos">
+                    <div class="panel-productos">
+                        <div class="busqueda-productos">
+                            <input type="text" class="control-formulario" placeholder="Buscar productos...">
+                            <button class="boton boton-primario boton-pequeno">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="filtros-categoria">
+                            <button class="filtro-categoria activo">Todos</button>
+                            <button class="filtro-categoria">Comidas</button>
+                            <button class="filtro-categoria">Bebidas</button>
+                            <button class="filtro-categoria">Postres</button>
+                            <button class="filtro-categoria">Combos</button>
+                            <button class="filtro-categoria">Promociones</button>
+                        </div>
+                        
+                        <div class="grid-productos">
+                            <!-- Producto 1 -->
+                            <div class="tarjeta-producto">
+                                <img src="../imgs/hamburguesa.png" alt="Combo Rockero" class="imagen-producto">
+                                <div class="nombre-producto">Combo Rockero</div>
+                                <div class="precio-producto">$250.00</div>
+                                <div class="stock-producto">Disponible: 15</div>
+                            </div>
+                            
+                            <!-- Producto 2 -->
+                            <div class="tarjeta-producto">
+                                <img src="../imgs/hamburguesa.png" alt="Cerveza Artesanal" class="imagen-producto">
+                                <div class="nombre-producto">Cerveza Artesanal</div>
+                                <div class="precio-producto">$80.00</div>
+                                <div class="stock-producto">Disponible: 24</div>
+                            </div>
+                              <div class="tarjeta-producto">
+                                <img src="../imgs/hamburguesa.png" alt="Cerveza Artesanal" class="imagen-producto">
+                                <div class="nombre-producto">Cerveza Artesanal</div>
+                                <div class="precio-producto">$80.00</div>
+                                <div class="stock-producto">Disponible: 24</div>
+                            </div>
+                            
+                              <div class="tarjeta-producto">
+                                <img src="../imgs/hamburguesa.png" alt="Cerveza Artesanal" class="imagen-producto">
+                                <div class="nombre-producto">Cerveza Artesanal</div>
+                                <div class="precio-producto">$80.00</div>
+                                <div class="stock-producto">Disponible: 24</div>
+                            </div>
+                            
+                              <div class="tarjeta-producto">
+                                <img src="../imgs/hamburguesa.png" alt="Cerveza Artesanal" class="imagen-producto">
+                                <div class="nombre-producto">Cerveza Artesanal</div>
+                                <div class="precio-producto">$80.00</div>
+                                <div class="stock-producto">Disponible: 24</div>
+                            </div>
+                            
+                              <div class="tarjeta-producto">
+                                <img src="../imgs/hamburguesa.png" alt="Cerveza Artesanal" class="imagen-producto">
+                                <div class="nombre-producto">Cerveza Artesanal</div>
+                                <div class="precio-producto">$80.00</div>
+                                <div class="stock-producto">Disponible: 24</div>
+                            </div>
+                              <div class="tarjeta-producto">
+                                <img src="../imgs/hamburguesa.png" alt="Cerveza Artesanal" class="imagen-producto">
+                                <div class="nombre-producto">Cerveza Artesanal</div>
+                                <div class="precio-producto">$80.00</div>
+                                <div class="stock-producto">Disponible: 24</div>
+                            </div>
+                              <div class="tarjeta-producto">
+                                <img src="../imgs/hamburguesa.png" alt="Cerveza Artesanal" class="imagen-producto">
+                                <div class="nombre-producto">Cerveza Artesanal</div>
+                                <div class="precio-producto">$80.00</div>
+                                <div class="stock-producto">Disponible: 24</div>
+                            </div>
+                            
+                            <!-- Más productos... -->
+                        </div>
+                    </div>
+                    
+                    <div class="panel-carrito">
+                        <div class="cabecera-carrito">
+                            <h3><i class="fas fa-shopping-cart"></i> Carrito</h3>
+                            <button class="boton-icono">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="items-carrito">
+                            <!-- Item 1 -->
+                            <div class="item-carrito">
+                                <div class="nombre-item">Combo Rockero</div>
+                                <div class="cantidad-item">
+                                    <button class="boton-cantidad">-</button>
+                                    <span>2</span>
+                                    <button class="boton-cantidad">+</button>
+                                </div>
+                                <div class="precio-item">$500.00</div>
+                                <button class="boton-eliminar">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Item 2 -->
+                            <div class="item-carrito">
+                                <div class="nombre-item">Cerveza Artesanal</div>
+                                <div class="cantidad-item">
+                                    <button class="boton-cantidad">-</button>
+                                    <span>1</span>
+                                    <button class="boton-cantidad">+</button>
+                                </div>
+                                <div class="precio-item">$80.00</div>
+                                <button class="boton-eliminar">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="total-carrito">
+                            <span>Total:</span>
+                            <span>$580.00</span>
+                        </div>
+                        
+                        <div class="metodos-pago">
+                            <div class="pestanas-pago">
+                                <button class="pestana-pago activo">Efectivo</button>
+                                <button class="pestana-pago">Tarjeta</button>
+                                <button class="pestana-pago">Transferencia</button>
+                            </div>
+                            
+                            <div class="detalles-pago">
+                                <div class="grupo-formulario">
+                                    <label>Monto Recibido:</label>
+                                    <input type="number" class="control-formulario" placeholder="0.00">
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label>Cambio:</label>
+                                    <input type="number" class="control-formulario" placeholder="0.00" disabled>
+                                </div>
+                            </div>
+                            
+                            <div class="acciones-carrito">
+                                <button class="boton boton-secundario">
+                                    <i class="fas fa-print"></i> Imprimir
+                                </button>
+                                <button class="boton boton-primario">
+                                    <i class="fas fa-check"></i> Finalizar Venta
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Ventas Rápidas -->
+            <section id="ventas-rapidas" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-bolt"></i> Ventas Rápidas</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nueva Venta Rápida
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-list"></i> Plantillas de Ventas Rápidas</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="grid-plantillas">
+                                <!-- Plantilla 1 -->
+                                <div class="plantilla-venta">
+                                    <div class="cabecera-plantilla">
+                                        <h4>Combo Individual</h4>
+                                        <button class="boton boton-primario boton-pequeno">
+                                            <i class="fas fa-cart-plus"></i> Usar
+                                        </button>
+                                    </div>
+                                    <ul class="items-plantilla">
+                                        <li>1x Combo Rockero</li>
+                                        <li>1x Bebida Pequeña</li>
+                                        <li>1x Postre</li>
+                                    </ul>
+                                    <div class="total-plantilla">Total: $280.00</div>
+                                </div>
+                                
+                                <!-- Plantilla 2 -->
+                                <div class="plantilla-venta">
+                                    <div class="cabecera-plantilla">
+                                        <h4>Bebidas para 2</h4>
+                                        <button class="boton boton-primario boton-pequeno">
+                                            <i class="fas fa-cart-plus"></i> Usar
+                                        </button>
+                                    </div>
+                                    <ul class="items-plantilla">
+                                        <li>2x Cerveza Artesanal</li>
+                                        <li>1x Botana</li>
+                                    </ul>
+                                    <div class="total-plantilla">Total: $190.00</div>
+                                </div>
+                                
+                                <!-- Más plantillas... -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-history"></i> Historial Ventas Rápidas</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <table class="tabla-ventas-rapidas">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Hora</th>
+                                        <th>Plantilla</th>
+                                        <th>Total</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#VR-125</td>
+                                        <td>10:45 AM</td>
+                                        <td>Combo Individual</td>
+                                        <td>$280.00</td>
+                                        <td>
+                                            <button class="boton-icono">
+                                                <i class="fas fa-redo"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <!-- Más filas... -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Pedidos Activos -->
+            <section id="pedidos-activos" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-clipboard-list"></i> Pedidos Activos</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-secundario boton-pequeno">
+                            <i class="fas fa-sync-alt"></i> Actualizar
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid-pedidos">
+                    <!-- Pedido 1 -->
+                    <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 4 - #12345</h3>
+                            <span class="badge-estado badge-preparacion">En preparación</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> Jose Daniel</p>
+                            <p><strong>Hora:</strong> 10:45 PM</p>
+                            <p><strong>Mesero:</strong> Juan Pérez</p>
+                            <p><strong>Canción:</strong> Amorfoda</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>2x Combo Rockero - $250 c/u</li>
+                                <li>1x Cerveza Artesanal - $80</li>
+                                <li>1x Brownie Metallica - $90</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $670.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-1" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                             <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 4 - #12345</h3>
+                            <span class="badge-estado badge-preparacion">En preparación</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> Jose Daniel</p>
+                            <p><strong>Hora:</strong> 10:45 PM</p>
+                            <p><strong>Mesero:</strong> Juan Pérez</p>
+                            <p><strong>Canción:</strong> Amorfoda</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>2x Combo Rockero - $250 c/u</li>
+                                <li>1x Cerveza Artesanal - $80</li>
+                                <li>1x Brownie Metallica - $90</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $670.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-1" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                             <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 4 - #12345</h3>
+                            <span class="badge-estado badge-preparacion">En preparación</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> Jose Daniel</p>
+                            <p><strong>Hora:</strong> 10:45 PM</p>
+                            <p><strong>Mesero:</strong> Juan Pérez</p>
+                            <p><strong>Canción:</strong> Amorfoda</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>2x Combo Rockero - $250 c/u</li>
+                                <li>1x Cerveza Artesanal - $80</li>
+                                <li>1x Brownie Metallica - $90</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $670.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-1" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                             <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 4 - #12345</h3>
+                            <span class="badge-estado badge-preparacion">En preparación</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> Jose Daniel</p>
+                            <p><strong>Hora:</strong> 10:45 PM</p>
+                            <p><strong>Mesero:</strong> Juan Pérez</p>
+                            <p><strong>Canción:</strong> Amorfoda</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>2x Combo Rockero - $250 c/u</li>
+                                <li>1x Cerveza Artesanal - $80</li>
+                                <li>1x Brownie Metallica - $90</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $670.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-1" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                             <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 4 - #12345</h3>
+                            <span class="badge-estado badge-preparacion">En preparación</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> Jose Daniel</p>
+                            <p><strong>Hora:</strong> 10:45 PM</p>
+                            <p><strong>Mesero:</strong> Juan Pérez</p>
+                            <p><strong>Canción:</strong> Amorfoda</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>2x Combo Rockero - $250 c/u</li>
+                                <li>1x Cerveza Artesanal - $80</li>
+                                <li>1x Brownie Metallica - $90</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $670.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-1" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                             <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 4 - #12345</h3>
+                            <span class="badge-estado badge-preparacion">En preparación</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> Jose Daniel</p>
+                            <p><strong>Hora:</strong> 10:45 PM</p>
+                            <p><strong>Mesero:</strong> Juan Pérez</p>
+                            <p><strong>Canción:</strong> Amorfoda</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>2x Combo Rockero - $250 c/u</li>
+                                <li>1x Cerveza Artesanal - $80</li>
+                                <li>1x Brownie Metallica - $90</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $670.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-1" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Más pedidos... -->
+                </div>
+            </section>
+
+            <!-- Sección Pedidos Pendientes -->
+            <section id="pedidos-pendientes" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-clock"></i> Pedidos Pendientes</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-secundario boton-pequeno">
+                            <i class="fas fa-sync-alt"></i> Actualizar
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid-pedidos">
+                    <!-- Pedido pendiente 1 -->
+                    <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 2 - #12346</h3>
+                            <span class="badge-estado badge-pendiente">Pendiente</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> María González</p>
+                            <p><strong>Hora:</strong> 11:20 PM</p>
+                            <p><strong>Mesero:</strong> Laura Méndez</p>
+                            <p><strong>Canción:</strong> Bohemian Rhapsody</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>1x Combo Clásico - $220</li>
+                                <li>2x Refresco - $40 c/u</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $300.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-2" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                     <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 2 - #12346</h3>
+                            <span class="badge-estado badge-pendiente">Pendiente</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> María González</p>
+                            <p><strong>Hora:</strong> 11:20 PM</p>
+                            <p><strong>Mesero:</strong> Laura Méndez</p>
+                            <p><strong>Canción:</strong> Bohemian Rhapsody</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>1x Combo Clásico - $220</li>
+                                <li>2x Refresco - $40 c/u</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $300.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-2" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                     <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 2 - #12346</h3>
+                            <span class="badge-estado badge-pendiente">Pendiente</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> María González</p>
+                            <p><strong>Hora:</strong> 11:20 PM</p>
+                            <p><strong>Mesero:</strong> Laura Méndez</p>
+                            <p><strong>Canción:</strong> Bohemian Rhapsody</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>1x Combo Clásico - $220</li>
+                                <li>2x Refresco - $40 c/u</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $300.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-2" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                     <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 2 - #12346</h3>
+                            <span class="badge-estado badge-pendiente">Pendiente</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> María González</p>
+                            <p><strong>Hora:</strong> 11:20 PM</p>
+                            <p><strong>Mesero:</strong> Laura Méndez</p>
+                            <p><strong>Canción:</strong> Bohemian Rhapsody</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>1x Combo Clásico - $220</li>
+                                <li>2x Refresco - $40 c/u</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $300.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-2" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                     <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 2 - #12346</h3>
+                            <span class="badge-estado badge-pendiente">Pendiente</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> María González</p>
+                            <p><strong>Hora:</strong> 11:20 PM</p>
+                            <p><strong>Mesero:</strong> Laura Méndez</p>
+                            <p><strong>Canción:</strong> Bohemian Rhapsody</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>1x Combo Clásico - $220</li>
+                                <li>2x Refresco - $40 c/u</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $300.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-2" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                     <div class="tarjeta-pedido">
+                        <div class="cabecera-pedido">
+                            <h3>Mesa 2 - #12346</h3>
+                            <span class="badge-estado badge-pendiente">Pendiente</span>
+                        </div>
+                        <div class="info-pedido">
+                            <p><strong>Cliente:</strong> María González</p>
+                            <p><strong>Hora:</strong> 11:20 PM</p>
+                            <p><strong>Mesero:</strong> Laura Méndez</p>
+                            <p><strong>Canción:</strong> Bohemian Rhapsody</p>
+                        </div>
+                        <div class="items-pedido">
+                            <ul>
+                                <li>1x Combo Clásico - $220</li>
+                                <li>2x Refresco - $40 c/u</li>
+                            </ul>
+                        </div>
+                        <div class="total-pedido">
+                            <strong>Total: $300.00</strong>
+                        </div>
+                        <div class="acciones-pedido">
+                            <button class="boton boton-primario">
+                                <i class="fas fa-check"></i> Completar
+                            </button>
+                            <a href="#detalle-pedido-2" class="boton boton-secundario">
+                                <i class="fas fa-eye"></i> Ver
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Más pedidos pendientes... -->
+                </div>
+            </section>
+
+            <!-- Sección Pedidos Completados -->
+            <section id="pedidos-completados" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-check-circle"></i> Pedidos Completados</h1>
+                    <div class="acciones-cabecera">
+                        <div class="filtros-historial">
+                            <div class="grupo-filtro">
+                                <label>Fecha:</label>
+                                <input type="date" class="control-formulario">
+                            </div>
+                            <button class="boton boton-primario boton-pequeno">
+                                <i class="fas fa-filter"></i> Filtrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tabla-contenedor">
+                    <table class="tabla-historial">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha/Hora</th>
+                                <th>Cliente</th>
+                                <th>Total</th>
+                                <th>Método</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                              <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                              <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                              <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                              <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                              <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                              <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                              <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                              <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                              <tr>
+                                <td>#12344</td>
+                                <td>10/07/2025 18:15</td>
+                                <td>Carlos Ruiz</td>
+                                <td>$450.00</td>
+                                <td>Tarjeta</td>
+                                <td><span class="badge-estado badge-completado">Completado</span></td>
+                                <td>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="boton-icono">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <!-- Más filas :p... -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="paginacion">
+                    <button class="boton-paginacion" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="boton-paginacion activo">1</button>
+                    <button class="boton-paginacion">2</button>
+                    <button class="boton-paginacion">3</button>
+                    <button class="boton-paginacion">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Sección Devoluciones -->
+            <section id="devoluciones" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-exchange-alt"></i> Devoluciones</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nueva Devolución
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-undo"></i> Procesar Devolución</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <form class="formulario">
+                                <div class="grupo-formulario">
+                                    <label for="numero-ticket">Número de Ticket:</label>
+                                    <input type="text" id="numero-ticket" class="control-formulario" placeholder="Ingrese el número de ticket">
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="motivo-devolucion">Motivo:</label>
+                                    <select id="motivo-devolucion" class="control-formulario">
+                                        <option value="">Seleccione un motivo</option>
+                                        <option value="producto-defectuoso">Producto defectuoso</option>
+                                        <option value="no-solicitado">No fue lo solicitado</option>
+                                        <option value="insatisfaccion">Insatisfacción con el producto</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="comentarios-devolucion">Comentarios:</label>
+                                    <textarea id="comentarios-devolucion" class="control-formulario" rows="3"></textarea>
+                                </div>
+                                <div class="acciones-formulario">
+                                    <button type="button" class="boton boton-secundario">
+                                        <i class="fas fa-search"></i> Buscar Ticket
+                                    </button>
+                                    <button type="submit" class="boton boton-primario">
+                                        <i class="fas fa-check"></i> Procesar Devolución
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-list"></i> Historial de Devoluciones</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <table class="tabla-historial">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Fecha</th>
+                                        <th>Ticket Original</th>
+                                        <th>Monto</th>
+                                        <th>Motivo</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#DEV-125</td>
+                                        <td>09/07/2025</td>
+                                        <td>#12340</td>
+                                        <td>$150.00</td>
+                                        <td>Producto defectuoso</td>
+                                        <td>
+                                            <button class="boton-icono">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <!-- Más filas... -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Clientes Frecuentes -->
+            <section id="clientes-frecuentes" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-star"></i> Clientes Frecuentes</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nuevo Cliente
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-search"></i> Buscar Cliente</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <form class="formulario">
+                                <div class="grupo-formulario">
+                                    <label for="busqueda-cliente">Nombre, Teléfono o Correo:</label>
+                                    <input type="text" id="busqueda-cliente" class="control-formulario" placeholder="Buscar cliente...">
+                                </div>
+                                <button type="submit" class="boton boton-primario">
+                                    <i class="fas fa-search"></i> Buscar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-users"></i> Lista de Clientes</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <table class="tabla-clientes">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Visitas</th>
+                                        <th>Última Visita</th>
+                                        <th>Gasto Total</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Jose Daniel</td>
+                                        <td>12</td>
+                                        <td>10/07/2025</td>
+                                        <td>$5,670.00</td>
+                                        <td>
+                                            <button class="boton-icono">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="boton-icono">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <!-- Más filas... -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Reservaciones -->
+            <section id="reservaciones" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-calendar-check"></i> Reservaciones</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nueva Reservación
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-calendar-day"></i> Reservaciones Hoy</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="lista-reservaciones">
+                                <!-- Reservación 1 -->
+                                <div class="item-reservacion">
+                                    <div class="info-reservacion">
+                                        <h4>Mesa 4 - Jose Daniel</h4>
+                                        <p><i class="fas fa-clock"></i> 8:00 PM - 4 personas</p>
+                                        <p><i class="fas fa-phone"></i> 555-1234-567</p>
+                                    </div>
+                                    <div class="acciones-reservacion">
+                                        <button class="boton boton-primario boton-pequeno">
+                                            <i class="fas fa-check"></i> Confirmar
+                                        </button>
+                                        <button class="boton boton-secundario boton-pequeno">
+                                            <i class="fas fa-times"></i> Cancelar
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Más reservaciones... -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-calendar-plus"></i> Nueva Reservación</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <form class="formulario">
+                                <div class="grupo-formulario">
+                                    <label for="nombre-cliente">Nombre del Cliente:</label>
+                                    <input type="text" id="nombre-cliente" class="control-formulario" required>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="telefono-cliente">Teléfono:</label>
+                                    <input type="tel" id="telefono-cliente" class="control-formulario" required>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="fecha-reservacion">Fecha:</label>
+                                    <input type="date" id="fecha-reservacion" class="control-formulario" required>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="hora-reservacion">Hora:</label>
+                                    <input type="time" id="hora-reservacion" class="control-formulario" required>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="personas-reservacion">Número de Personas:</label>
+                                    <input type="number" id="personas-reservacion" class="control-formulario" min="1" required>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="mesa-reservacion">Mesa Preferida:</label>
+                                    <select id="mesa-reservacion" class="control-formulario">
+                                        <option value="">Sin preferencia</option>
+                                        <option value="1">Mesa 1</option>
+                                        <option value="2">Mesa 2</option>
+                                        <!-- Más mesas... -->
+                                    </select>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="notas-reservacion">Notas:</label>
+                                    <textarea id="notas-reservacion" class="control-formulario" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="boton boton-primario">
+                                    <i class="fas fa-save"></i> Guardar Reservación
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Fichas Clientes -->
+            <section id="fichas-clientes" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-address-card"></i> Fichas de Clientes</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nueva Ficha
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-filter"></i> Filtros de Búsqueda</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <form class="formulario">
+                                <div class="grupo-formulario">
+                                    <label for="tipo-busqueda">Buscar por:</label>
+                                    <select id="tipo-busqueda" class="control-formulario">
+                                        <option value="nombre">Nombre</option>
+                                        <option value="telefono">Teléfono</option>
+                                        <option value="correo">Correo</option>
+                                        <option value="frecuencia">Frecuencia de Visitas</option>
+                                    </select>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="valor-busqueda">Valor:</label>
+                                    <input type="text" id="valor-busqueda" class="control-formulario">
+                                </div>
+                                <button type="submit" class="boton boton-primario">
+                                    <i class="fas fa-search"></i> Buscar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-id-card"></i> Información del Cliente</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="ficha-cliente">
+                                <div class="cabecera-ficha">
+                                    <img src="img/cliente-ejemplo.jpg" alt="Cliente" class="foto-cliente">
+                                    <div class="info-basica">
+                                        <h3>Jose Daniel</h3>
+                                        <p><i class="fas fa-phone"></i> 555-1234-567</p>
+                                        <p><i class="fas fa-envelope"></i> jose.daniel@example.com</p>
+                                        <p><i class="fas fa-birthday-cake"></i> 15/03/1985</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="detalles-ficha">
+                                    <div class="seccion-ficha">
+                                        <h4><i class="fas fa-history"></i> Historial de Visitas</h4>
+                                        <ul class="historial-visitas">
+                                            <li>10/07/2025 - $670.00</li>
+                                            <li>05/07/2025 - $450.00</li>
+                                            <li>28/06/2025 - $890.00</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="seccion-ficha">
+                                        <h4><i class="fas fa-heart"></i> Preferencias</h4>
+                                        <div class="preferencias-cliente">
+                                            <span class="badge-preferencia">Combo Rockero</span>
+                                            <span class="badge-preferencia">Cerveza Artesanal</span>
+                                            <span class="badge-preferencia">Mesa 4</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="seccion-ficha">
+                                        <h4><i class="fas fa-comment"></i> Notas</h4>
+                                        <p>Cliente VIP. Prefiere música rock de los 80s. Celebrará su cumpleaños el próximo mes.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="acciones-ficha">
+                                    <button class="boton boton-primario">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </button>
+                                    <button class="boton boton-secundario">
+                                        <i class="fas fa-envelope"></i> Enviar Promoción
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+                
+           
+
+            <!-- Sección Reportes Diarios -->
+            <section id="reportes-diarios" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-chart-line"></i> Reportes Diarios</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-file-export"></i> Exportar
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-calendar-day"></i> Reporte del Día</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="resumen-reporte">
+                                <div class="item-resumen">
+                                    <span class="etiqueta-resumen">Ventas Totales:</span>
+                                    <span class="valor-resumen">$2,560.00</span>
+                                </div>
+                                <div class="item-resumen">
+                                    <span class="etiqueta-resumen">N° de Transacciones:</span>
+                                    <span class="valor-resumen">24</span>
+                                </div>
+                                <div class="item-resumen">
+                                    <span class="etiqueta-resumen">Ticket Promedio:</span>
+                                    <span class="valor-resumen">$106.67</span>
+                                </div>
+                            </div>
+                            
+                            <div class="grafico-reporte">
+                                <div class="placeholder-grafico">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <p>Gráfico de ventas por hora</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-filter"></i> Filtros de Reporte</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <form class="formulario">
+                                <div class="grupo-formulario">
+                                    <label for="fecha-reporte">Fecha:</label>
+                                    <input type="date" id="fecha-reporte" class="control-formulario">
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="tipo-reporte">Tipo de Reporte:</label>
+                                    <select id="tipo-reporte" class="control-formulario">
+                                        <option value="diario">Diario</option>
+                                        <option value="semanal">Semanal</option>
+                                        <option value="mensual">Mensual</option>
+                                        <option value="personalizado">Personalizado</option>
+                                    </select>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="formato-reporte">Formato:</label>
+                                    <select id="formato-reporte" class="control-formulario">
+                                        <option value="resumen">Resumen</option>
+                                        <option value="detallado">Detallado</option>
+                                        <option value="grafico">Gráfico</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="boton boton-primario">
+                                    <i class="fas fa-search"></i> Generar Reporte
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Cierre de Caja -->
+            <section id="cierre-caja" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-lock"></i> Cierre de Caja</h1>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-info-circle"></i> Resumen de Caja</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="item-info">
+                                <span class="etiqueta-info">Cajero:</span>
+                                <span class="valor-info">Helena Alfonso</span>
+                            </div>
+                            <div class="item-info">
+                                <span class="etiqueta-info">Fecha Apertura:</span>
+                                <span class="valor-info">10/07/2025 08:00 AM</span>
+                            </div>
+                            <div class="item-info">
+                                <span class="etiqueta-info">Hora Actual:</span>
+                                <span class="valor-info">10:45 PM</span>
+                            </div>
+                            <div class="item-info">
+                                <span class="etiqueta-info">Estado:</span>
+                                <span class="badge-estado badge-abierta">Abierta</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-coins"></i> Totales</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="item-total">
+                                <span class="etiqueta-total">Ventas Efectivo:</span>
+                                <span class="valor-total">$1,250.00</span>
+                            </div>
+                            <div class="item-total">
+                                <span class="etiqueta-total">Ventas Tarjeta:</span>
+                                <span class="valor-total">$890.00</span>
+                            </div>
+                            <div class="item-total">
+                                <span class="etiqueta-total">Ventas Transferencia:</span>
+                                <span class="valor-total">$420.00</span>
+                            </div>
+                            <div class="item-total total-general">
+                                <span class="etiqueta-total">Total Ventas:</span>
+                                <span class="valor-total">$2,560.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-calculator"></i> Conteo Final</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <form class="formulario">
+                                <div class="grupo-formulario">
+                                    <label for="efectivo-contado">Efectivo en Caja:</label>
+                                    <input type="number" id="efectivo-contado" class="control-formulario" placeholder="0.00" step="0.01" min="0">
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="observaciones">Observaciones:</label>
+                                    <textarea id="observaciones" class="control-formulario" rows="3" placeholder="Notas importantes..."></textarea>
+                                </div>
+                                <div class="acciones-formulario">
+                                    <button type="button" class="boton boton-secundario">
+                                        <i class="fas fa-print"></i> Imprimir Reporte
+                                    </button>
+                                    <button type="submit" class="boton boton-primario">
+                                        <i class="fas fa-lock"></i> Cerrar Caja
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Inventario -->
+            <section id="inventario" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-clipboard-check"></i> Inventario</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nuevo Producto
+                        </button>
+                        <button class="boton boton-secundario boton-pequeno">
+                            <i class="fas fa-file-import"></i> Importar
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-filter"></i> Filtros de Inventario</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <form class="formulario">
+                                <div class="grupo-formulario">
+                                    <label for="categoria-inventario">Categoría:</label>
+                                    <select id="categoria-inventario" class="control-formulario">
+                                        <option value="">Todas</option>
+                                        <option value="comidas">Comidas</option>
+                                        <option value="bebidas">Bebidas</option>
+                                        <option value="postres">Postres</option>
+                                    </select>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="estado-inventario">Estado:</label>
+                                    <select id="estado-inventario" class="control-formulario">
+                                        <option value="">Todos</option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="agotado">Agotado</option>
+                                        <option value="bajo">Bajo en Stock</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="boton boton-primario">
+                                    <i class="fas fa-filter"></i> Filtrar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-boxes"></i> Lista de Productos</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <table class="tabla-inventario">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Categoría</th>
+                                        <th>Stock</th>
+                                        <th>Precio</th>
+                                        <th>Estado</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Combo Rockero</td>
+                                        <td>Comidas</td>
+                                        <td>15</td>
+                                        <td>$250.00</td>
+                                        <td><span class="badge-estado badge-completado">Disponible</span></td>
+                                        <td>
+                                            <button class="boton-icono">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="boton-icono">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <!-- Más filas... -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Productos Populares -->
+            <section id="productos-populares" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-fire"></i> Productos Populares</h1>
+                    <div class="acciones-cabecera">
+                        <div class="filtros-historial">
+                            <div class="grupo-filtro">
+                                <label>Período:</label>
+                                <select class="control-formulario">
+                                    <option>Hoy</option>
+                                    <option>Esta Semana</option>
+                                    <option>Este Mes</option>
+                                    <option>Este Año</option>
+                                </select>
+                            </div>
+                            <button class="boton boton-primario boton-pequeno">
+                                <i class="fas fa-filter"></i> Aplicar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-chart-pie"></i> Resumen de Popularidad</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="grafico-popularidad">
+                                <div class="placeholder-grafico">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <p>Gráfico de productos más vendidos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-trophy"></i> Top 10 Productos</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <table class="tabla-populares">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Producto</th>
+                                        <th>Ventas</th>
+                                        <th>Total Vendido</th>
+                                        <th>Tendencia</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Combo Rockero</td>
+                                        <td>45</td>
+                                        <td>$11,250.00</td>
+                                        <td><i class="fas fa-arrow-up tendencia-positiva"></i> 12%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Cerveza Artesanal</td>
+                                        <td>38</td>
+                                        <td>$3,040.00</td>
+                                        <td><i class="fas fa-arrow-up tendencia-positiva"></i> 5%</td>
+                                    </tr>
+                                    <!-- Más filas... -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Combos -->
+            <section id="combos" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-layer-group"></i> Combos</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nuevo Combo
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-list"></i> Lista de Combos</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="grid-combos">
+                                <!-- Combo 1 -->
+                                <div class="tarjeta-combo">
+                                    <div class="cabecera-combo">
+                                        <h4>Combo Rockero</h4>
+                                        <span class="precio-combo">$250.00</span>
+                                    </div>
+                                    <div class="contenido-combo">
+                                        <ul class="items-combo">
+                                            <li>1x Hamburguesa Clásica</li>
+                                            <li>1x Papas Fritas</li>
+                                            <li>1x Bebida Mediana</li>
+                                        </ul>
+                                        <div class="acciones-combo">
+                                            <button class="boton boton-secundario boton-pequeno">
+                                                <i class="fas fa-edit"></i> Editar
+                                            </button>
+                                            <button class="boton boton-primario boton-pequeno">
+                                                <i class="fas fa-eye"></i> Ver
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Combo 2 -->
+                                <div class="tarjeta-combo">
+                                    <div class="cabecera-combo">
+                                        <h4>Combo Familiar</h4>
+                                        <span class="precio-combo">$450.00</span>
+                                    </div>
+                                    <div class="contenido-combo">
+                                        <ul class="items-combo">
+                                            <li>2x Hamburguesa Clásica</li>
+                                            <li>2x Papas Fritas</li>
+                                            <li>2x Bebida Mediana</li>
+                                            <li>1x Postre</li>
+                                        </ul>
+                                        <div class="acciones-combo">
+                                            <button class="boton boton-secundario boton-pequeno">
+                                                <i class="fas fa-edit"></i> Editar
+                                            </button>
+                                            <button class="boton boton-primario boton-pequeno">
+                                                <i class="fas fa-eye"></i> Ver
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Más combos... -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-chart-line"></i> Rendimiento de Combos</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <table class="tabla-rendimiento">
+                                <thead>
+                                    <tr>
+                                        <th>Combo</th>
+                                        <th>Ventas</th>
+                                        <th>Total Vendido</th>
+                                        <th>Margen</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Combo Rockero</td>
+                                        <td>120</td>
+                                        <td>$30,000.00</td>
+                                        <td>35%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Combo Familiar</td>
+                                        <td>85</td>
+                                        <td>$38,250.00</td>
+                                        <td>40%</td>
+                                    </tr>
+                                    <!-- Más filas... -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Promociones -->
+            <section id="promociones" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-percentage"></i> Promociones</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nueva Promoción
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-bullhorn"></i> Promociones Activas</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="lista-promociones">
+                                <!-- Promoción 1 -->
+                                <div class="item-promocion">
+                                    <div class="info-promocion">
+                                        <h4>Martes de Rock</h4>
+                                        <p><i class="fas fa-calendar-alt"></i> Todos los martes</p>
+                                        <p><i class="fas fa-tag"></i> 15% de descuento en combos</p>
+                                        <p><i class="fas fa-clock"></i> 6:00 PM - 11:00 PM</p>
+                                    </div>
+                                    <div class="acciones-promocion">
+                                        <button class="boton boton-secundario boton-pequeno">
+                                            <i class="fas fa-edit"></i> Editar
+                                        </button>
+                                        <button class="boton boton-primario boton-pequeno">
+                                            <i class="fas fa-eye"></i> Ver
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Promoción 2 -->
+                                <div class="item-promocion">
+                                    <div class="info-promocion">
+                                        <h4>Happy Hour</h4>
+                                        <p><i class="fas fa-calendar-alt"></i> Lunes a Viernes</p>
+                                        <p><i class="fas fa-tag"></i> 2x1 en bebidas</p>
+                                        <p><i class="fas fa-clock"></i> 4:00 PM - 7:00 PM</p>
+                                    </div>
+                                    <div class="acciones-promocion">
+                                        <button class="boton boton-secundario boton-pequeno">
+                                            <i class="fas fa-edit"></i> Editar
+                                        </button>
+                                        <button class="boton boton-primario boton-pequeno">
+                                            <i class="fas fa-eye"></i> Ver
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Más promociones... -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-chart-bar"></i> Efectividad de Promociones</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <div class="grafico-promociones">
+                                <div class="placeholder-grafico">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <p>Gráfico de rendimiento de promociones</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Configuración -->
+            <section id="configuracion" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-cog"></i> Configuración</h1>
+                </div>
+                
+                <div class="pestanas-configuracion">
+                    <a href="#general-config" class="pestana-config activo">General</a>
+                    <a href="#impresion-config" class="pestana-config">Impresión</a>
+                    <a href="#seguridad-config" class="pestana-config">Seguridad</a>
+                </div>
+                
+                <div class="paneles-configuracion">
+                    <!-- Panel General -->
+                    <div id="general-config" class="panel-config visible">
+                        <form class="formulario">
+                            <div class="grupo-formulario">
+                                <label for="nombre-negocio">Nombre del Establecimiento:</label>
+                                <input type="text" id="nombre-negocio" class="control-formulario" value="Café Rock Get Back">
+                            </div>
+                            <div class="grupo-formulario">
+                                <label for="direccion">Dirección:</label>
+                                <input type="text" id="direccion" class="control-formulario" value="Av. Rock 123, Ciudad">
+                            </div>
+                            <div class="grupo-formulario">
+                                <label for="telefono">Teléfono:</label>
+                                <input type="tel" id="telefono" class="control-formulario" value="+123 456 7890">
+                            </div>
+                            <div class="grupo-formulario">
+                                <label for="impuesto">Tasa de Impuesto (%):</label>
+                                <input type="number" id="impuesto" class="control-formulario" value="10" min="0" max="30">
+                            </div>
+                            <div class="grupo-formulario">
+                                <label for="metodo-pago-default">Método de Pago Predeterminado:</label>
+                                <select id="metodo-pago-default" class="control-formulario">
+                                    <option value="efectivo">Efectivo</option>
+                                    <option value="tarjeta">Tarjeta</option>
+                                    <option value="transferencia">Transferencia</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="boton boton-primario">
+                                <i class="fas fa-save"></i> Guardar Cambios
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Panel Impresión -->
+                    <div id="impresion-config" class="panel-config">
+                        <form class="formulario">
+                            <div class="grupo-formulario">
+                                <label for="impresora">Impresora Predeterminada:</label>
+                                <select id="impresora" class="control-formulario">
+                                    <option value="termica">Térmica (80mm)</option>
+                                    <option value="normal">Normal (A4)</option>
+                                </select>
+                            </div>
+                            <div class="grupo-formulario">
+                                <label for="copias">Copias de tickets:</label>
+                                <input type="number" id="copias" class="control-formulario" value="1" min="1" max="3">
+                            </div>
+                            <div class="grupo-formulario">
+                                <label>
+                                    <input type="checkbox" id="logo-ticket"> Mostrar logo en tickets
+                                </label>
+                            </div>
+                            <button type="submit" class="boton boton-primario">
+                                <i class="fas fa-save"></i> Guardar Cambios
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Panel Seguridad -->
+                    <div id="seguridad-config" class="panel-config">
+                        <form class="formulario">
+                            <div class="grupo-formulario">
+                                <label for="tiempo-sesion">Tiempo de sesión (minutos):</label>
+                                <input type="number" id="tiempo-sesion" class="control-formulario" value="30" min="5" max="120">
+                            </div>
+                            <div class="grupo-formulario">
+                                <label>
+                                    <input type="checkbox" id="confirmar-cierre"> Confirmar antes de cerrar caja
+                                </label>
+                            </div>
+                            <div class="grupo-formulario">
+                                <label>
+                                    <input type="checkbox" id="bloquear-pantalla"> Bloquear pantalla después de 5 minutos
+                                </label>
+                            </div>
+                            <button type="submit" class="boton boton-primario">
+                                <i class="fas fa-save"></i> Guardar Cambios
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Turnos -->
+            <section id="turnos" class="seccion-contenido">
+                <div class="cabecera-seccion">
+                    <h1><i class="fas fa-user-clock"></i> Turnos</h1>
+                    <div class="acciones-cabecera">
+                        <button class="boton boton-primario boton-pequeno">
+                            <i class="fas fa-plus"></i> Nuevo Turno
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-calendar-week"></i> Turnos Activos</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <table class="tabla-turnos">
+                                <thead>
+                                    <tr>
+                                        <th>Empleado</th>
+                                        <th>Rol</th>
+                                        <th>Turno</th>
+                                        <th>Hora Inicio</th>
+                                        <th>Hora Fin</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Helena Alfonso</td>
+                                        <td>Cajero</td>
+                                        <td>Matutino</td>
+                                        <td>08:00 AM</td>
+                                        <td>04:00 PM</td>
+                                        <td><span class="badge-estado badge-completado">Activo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan Pérez</td>
+                                        <td>Mesero</td>
+                                        <td>Vespertino</td>
+                                        <td>04:00 PM</td>
+                                        <td>12:00 AM</td>
+                                        <td><span class="badge-estado badge-completado">Activo</span></td>
+                                    </tr>
+                                    <!-- Más filas... -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <div class="cabecera-tarjeta">
+                            <h3><i class="fas fa-calendar-alt"></i> Programar Turno</h3>
+                        </div>
+                        <div class="cuerpo-tarjeta">
+                            <form class="formulario">
+                                <div class="grupo-formulario">
+                                    <label for="empleado-turno">Empleado:</label>
+                                    <select id="empleado-turno" class="control-formulario">
+                                        <option value="">Seleccione un empleado</option>
+                                        <option value="1">Helena Alfonso</option>
+                                        <option value="2">Juan Pérez</option>
+                                        <!-- Más empleados... -->
+                                    </select>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="fecha-turno">Fecha:</label>
+                                    <input type="date" id="fecha-turno" class="control-formulario">
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="tipo-turno">Tipo de Turno:</label>
+                                    <select id="tipo-turno" class="control-formulario">
+                                        <option value="matutino">Matutino (8AM - 4PM)</option>
+                                        <option value="vespertino">Vespertino (4PM - 12AM)</option>
+                                        <option value="nocturno">Nocturno (12AM - 8AM)</option>
+                                        <option value="personalizado">Personalizado</option>
+                                    </select>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="notas-turno">Notas:</label>
+                                    <textarea id="notas-turno" class="control-formulario" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="boton boton-primario">
+                                    <i class="fas fa-save"></i> Guardar Turno
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Detalle Pedido -->
+    <div id="detalle-pedido-1" class="detalle-pedido">
+        <div class="contenido-detalle">
+            <div class="cabecera-detalle">
+                <h2>Detalle del Pedido #12345</h2>
+                <a href="#" class="boton-cerrar">&times;</a>
+            </div>
+            <div class="info-detalle">
+                <div class="item-detalle">
+                    <strong>Cliente:</strong> Jose Daniel
+                </div>
+                <div class="item-detalle">
+                    <strong>Fecha y hora:</strong> 10 de Julio de 2025 - 5:58 pm
+                </div>
+                <div class="item-detalle">
+                    <strong>Mesa:</strong> Mesa 4
+                </div>
+                <div class="item-detalle">
+                    <strong>Canción:</strong> Amorfoda
+                </div>
+                <div class="item-detalle">
+                    <strong>Mesero:</strong> Juan Pérez
+                </div>
+                <div class="item-detalle">
+                    <strong>Estado del pedido:</strong> En proceso
+                </div>
+            </div>
+            
+            <table class="tabla-detalle">
+                <thead>
+                    <tr class="tabla-color">
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Combo Rockero</td>
+                        <td>2</td>
+                        <td>$250.00</td>
+                        <td>$500.00</td>
+                    </tr>
+                    <tr>
+                        <td>Cerveza Artesanal</td>
+                        <td>1</td>
+                        <td>$80.00</td>
+                        <td>$80.00</td>
+                    </tr>
+                    <tr>
+                        <td>Brownie Metallica</td>
+                        <td>1</td>
+                        <td>$90.00</td>
+                        <td>$90.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="total-detalle">
+                <strong>Total: $670.00</strong>
+            </div>
+            
+            <div class="acciones-detalle">
+                <button class="boton boton-primario">
+                    <i class="fas fa-check"></i> Marcar como Pagado
+                </button>
+                <a href="#" class="boton boton-secundario">
+                    <i class="fas fa-times"></i> Cerrar
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

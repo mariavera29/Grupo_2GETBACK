@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Get Back</title>
+   
+	
+	<link rel="stylesheet" href="../admin/style/Estilos.css">
+	<img src="../admin/images/logo.png" alt="Usuario">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+	
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Panel Admin</h2>
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-item active" data-section="panel-principal">Panel principal</div>
+                <div class="menu-item" data-section="ventas">Ventas</div>
+                <div class="menu-item" data-section="productos">Productos</div>
+                <div class="menu-item" data-section="gestion-usuario">Gestion Usuario</div>
+                <div class="menu-item" data-section="eventos">Eventos</div>
+                <div class="menu-item" data-section="configuracion">Configuración</div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1 class="page-title">Dashboard</h1>
+                <div class="user-info">
+                    <img src="../Administrador/assets/images/logo get back.png" alt="Usuario">
+                    <span>Administrador</span>
+                </div>
+            </div>
+
+            <!-- Sección Panel Principal -->
+            <div id="panel-principal" class="content-section active">
+                <!-- Dashboard Cards -->
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <div class="card-title">Usuarios</div>
+                                <div class="card-value">1,254</div>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="card-label">Total registrados</div>
+                        <div class="card-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +12% este mes
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <div class="card-title">Pedidos</div>
+                                <div class="card-value">324</div>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="card-label">Este mes</div>
+                        <div class="card-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +8% este mes
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <div class="card-title">Productos</div>
+                                <div class="card-value">856</div>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                        </div>
+                        <div class="card-label">En inventario</div>
+                        <div class="card-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +15% este mes
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <div class="card-title">Ingresos</div>
+                                <div class="card-value">$12,540</div>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                        </div>
+                        <div class="card-label">Este mes</div>
+                        <div class="card-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +15% este mes
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Actividad Reciente</div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-sync-alt"></i>
+                            Actualizar
+                        </button>
+                    </div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-title">Nuevo usuario registrado</div>
+                                <div class="activity-desc">Juan Pérez se registró en el sistema</div>
+                                <div class="activity-time">Hace 10 minutos</div>
+                            </div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-title">Nuevo pedido</div>
+                                <div class="activity-desc">Pedido #12345 por $150,000</div>
+                                <div class="activity-time">Hace 25 minutos</div>
+                            </div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-title">Producto actualizado</div>
+                                <div class="activity-desc">"Cerveza Reds" - Stock ajustado</div>
+                                <div class="activity-time">Hace 1 hora</div>
+                            </div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-title">Reporte generado</div>
+                                <div class="activity-desc">Reporte mensual de ventas</div>
+                                <div class="activity-time">Hoy, 09:45 AM</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sección Ventas -->
+            <div id="ventas" class="content-section">
+                <!-- Filtros de fecha -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Filtrar por Fecha</h2>
+                    </div>
+                    <div class="date-filter">
+                        <div class="form-group">
+                            <label for="fecha-inicio">Fecha de inicio</label>
+                            <input type="date" id="fecha-inicio" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha-fin">Fecha de fin</label>
+                            <input type="date" id="fecha-fin" class="form-control">
+                        </div>
+                        <div class="form-group button-group">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-filter"></i> Filtrar
+                            </button>
+                        </div>
+                        <div class="form-group button-group">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-sync-alt"></i> Restablecer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="summary-cards">
+                    <div class="card summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-label">Ventas Totales</div>
+                            <div class="card-value">$24,580</div>
+                            <div class="card-change positive">
+                                <i class="fas fa-arrow-up"></i> +12% vs período anterior
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-label">Órdenes</div>
+                            <div class="card-value">148</div>
+                            <div class="card-change positive">
+                                <i class="fas fa-arrow-up"></i> +8% vs período anterior
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-label">Productos Vendidos</div>
+                            <div class="card-value">423</div>
+                            <div class="card-change positive">
+                                <i class="fas fa-arrow-up"></i> +15% vs período anterior
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-label">Promedio Ventas</div>
+                            <div class="card-value">$166,800</div>
+                            <div class="card-change positive">
+                                <i class="fas fa-arrow-up"></i> +3% vs período anterior
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales Chart -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Ventas por Fecha</h2>
+                        <div class="chart-periods">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-calendar-day"></i> Diario
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-calendar-week"></i> Semanal
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-calendar-alt"></i> Mensual
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-calendar"></i> Anual
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sales-chart">
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Gráfico de ventas se mostrará aquí</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Products -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Productos Más Vendidos</h2>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-list"></i> Ver todos
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="sales-table">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Categoría</th>
+                                    <th>Unidades Vendidas</th>
+                                    <th>Ingresos</th>
+                                    <th>Tendencia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cerveza Artesanal</td>
+                                    <td>Licores</td>
+                                    <td>215</td>
+                                    <td>$258,000</td>
+                                    <td><span class="badge success"><i class="fas fa-arrow-up"></i> 24%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Vino Tinto</td>
+                                    <td>Licores</td>
+                                    <td>167</td>
+                                    <td>$190,000</td>
+                                    <td><span class="badge success"><i class="fas fa-arrow-up"></i> 12%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Hamburguesa Especial</td>
+                                    <td>Comida</td>
+                                    <td>142</td>
+                                    <td>$178,400</td>
+                                    <td><span class="badge success"><i class="fas fa-arrow-up"></i> 45%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Cubeta Cerveza</td>
+                                    <td>Licores</td>
+                                    <td>98</td>
+                                    <td>$129,700</td>
+                                    <td><span class="badge success"><i class="fas fa-arrow-up"></i> 8%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Perro Caliente</td>
+                                    <td>Comida</td>
+                                    <td>85</td>
+                                    <td>$76,500</td>
+                                    <td><span class="badge success"><i class="fas fa-arrow-up"></i> 5%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Productos -->
+            <div id="productos" class="content-section">
+                <!-- Formulario de Productos -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fas fa-cog"></i> Gestión de Productos</div>
+                    </div>
+                    <div class="card-content">
+                        <form id="product-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="drink-name">Nombre del Producto</label>
+                                    <input type="text" id="drink-name" placeholder="Ej: Mojito de Fresa o Hamburguesa Get Back" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="drink-price">Precio ($)</label>
+                                    <input id="drink-price" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="drink-category">Categoría</label>
+                                    <select id="drink-category" required>
+                                        <option value="coffee">Café y Té</option>
+                                        <option value="special">Especialidades</option>
+                                        <option value="cold">Bebidas Frías</option>
+                                        <option value="aromatic">Aromáticas y Refrescos</option>
+                                        <option value="cocktail">Cócteles</option>
+                                        <option value="liquor">Licores</option>
+                                        <option value="food">Comida</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="drink-image">URL de la Imagen</label>
+                                    <input type="text" id="drink-image" placeholder="https://..." required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="drink-description">Descripción/Ingredientes</label>
+                                <textarea id="drink-description" placeholder="Ingredientes, descripción, etc." required></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="save-product">
+                                <i class="fas fa-save"></i> Guardar Producto
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Categorías de Productos -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fas fa-list"></i> Categorías de Productos</div>
+                    </div>
+                    <div class="card-content">
+                        <!-- Navegación por categorías -->
+                        <div class="category-nav">
+                            <button class="btn btn-outline active" data-category="bebidas">Bebidas</button>
+                            <button class="btn btn-outline" data-category="cocteles">Cócteles</button>
+                            <button class="btn btn-outline" data-category="licores">Licores</button>
+                            <button class="btn btn-outline" data-category="comida">Comida</button>
+                            <button class="btn btn-outline" data-category="adicional">Adicionales</button>
+                        </div>
+                        
+                        <!-- Bebidas -->
+                        <div class="category-section" id="bebidas">
+                            <h3 class="section-title"><i class="fas fa-coffee"></i> Nuestras Bebidas</h3>
+                            
+                            <!-- Café y Té -->
+                            <div class="subcategory">
+                                <h4 class="subcategory-title"><i class="fas fa-coffee"></i> Café y Té</h4>
+                                <div class="products-grid">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Americano">
+                                        </div>
+                                        <div class="product-details">
+                                            <div class="product-name">Americano</div>
+                                            <div class="product-price">$3.000</div>
+                                            <div class="product-description">Café negro americano</div>
+                                        </div>
+                                        <div class="product-actions">
+                                            <button class="btn btn-outline btn-sm">
+                                                <i class="fas fa-edit"></i> Editar
+                                            </button>
+                                            <button class="btn btn-outline btn-sm">
+                                                <i class="fas fa-trash"></i> Eliminar
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Más productos de café y té -->
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Caserito">
+                                        </div>
+                                        <div class="product-details">
+                                            <div class="product-name">Caserito</div>
+                                            <div class="product-price">$2.000</div>
+                                            <div class="product-description">Café tradicional</div>
+                                        </div>
+                                        <div class="product-actions">
+                                            <button class="btn btn-outline btn-sm">
+                                                <i class="fas fa-edit"></i> Editar
+                                            </button>
+                                            <button class="btn btn-outline btn-sm">
+                                                <i class="fas fa-trash"></i> Eliminar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Más secciones de categorías... -->
+                        
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus-circle"></i> Agregar Nuevo Producto
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Gestión de Usuarios -->
+            <div id="gestion-usuario" class="content-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Lista de Usuarios</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Agregar Usuario
+                        </button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="user-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Correo</th>
+                                    <th>Rol</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Ana López</td>
+                                    <td>ana@example.com</td>
+                                    <td>Administrador</td>
+                                    <td class="actions">
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-edit"></i>
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                            Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Helena Alfonso</td>
+                                    <td>helena@example.com</td>
+                                    <td>Mesera</td>
+                                    <td class="actions">
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-edit"></i>
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                            Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Carlos Mendez</td>
+                                    <td>carlos@example.com</td>
+                                    <td>Cocinero</td>
+                                    <td class="actions">
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-edit"></i>
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                            Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Luisa Fernández</td>
+                                    <td>luisa@example.com</td>
+                                    <td>Mesera</td>
+                                    <td class="actions">
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-edit"></i>
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                            Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Miguel Torres</td>
+                                    <td>miguel@example.com</td>
+                                    <td>Cocinero</td>
+                                    <td class="actions">
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-edit"></i>
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                            Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Eventos -->
+            <div id="eventos" class="content-section">
+                <div class="section-header">
+                    <h2>Próximos Eventos</h2>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Nuevo Evento
+                    </button>
+                </div>
+
+                <div class="events-grid">
+                    <!-- Evento 1 -->
+                    <div class="event-card">
+                        <img src="../imgs/evento.png" alt="Noche de Jazz" class="event-image">
+                        <div class="event-content">
+                            <h3>Noche de Jazz</h3>
+                            <div class="event-meta">
+                                <span class="event-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Viernes 18 de Julio - 21:00 hrs
+                                </span>
+                            </div>
+                            <p class="event-description">
+                                Jazz en vivo, cócteles exclusivos y ambiente íntimo.
+                            </p>
+                            <div class="event-actions">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-edit"></i>
+                                    Editar
+                                </button>
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                    Eliminar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 2 -->
+                    <div class="event-card">
+                        <img src="../imgs/evento.png" alt="Cata de Vinos" class="event-image">
+                        <div class="event-content">
+                            <h3>Cata de Vinos</h3>
+                            <div class="event-meta">
+                                <span class="event-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Miércoles 24 de Julio - 19:00 hrs
+                                </span>
+                            </div>
+                            <p class="event-description">
+                                Explora sabores únicos con expertos sommeliers y tapas gourmet.
+                            </p>
+                            <div class="event-actions">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-edit"></i>
+                                    Editar
+                                </button>
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                    Eliminar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 3 -->
+                    <div class="event-card">
+                        <img src="../imgs/evento.png" alt="Brunch Acústico" class="event-image">
+                        <div class="event-content">
+                            <h3>Brunch Acústico</h3>
+                            <div class="event-meta">
+                                <span class="event-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Domingo 4 de Agosto - 12:00 hrs
+                                </span>
+                            </div>
+                            <p class="event-description">
+                                Brunch con música en vivo y menú especial de temporada.
+                            </p>
+                            <div class="event-actions">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-edit"></i>
+                                    Editar
+                                </button>
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                    Eliminar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 4 -->
+                    <div class="event-card">
+                        <img src="../imgs/evento.png" alt="Noche de Sushi" class="event-image">
+                        <div class="event-content">
+                            <h3>Noche de Sushi</h3>
+                            <div class="event-meta">
+                                <span class="event-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Sábado 10 de Agosto - 20:00 hrs
+                                </span>
+                            </div>
+                            <p class="event-description">
+                                Degustación de sushi premium con sake pairing.
+                            </p>
+                            <div class="event-actions">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-edit"></i>
+                                    Editar
+                                </button>
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                    Eliminar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Configuración -->
+            <div id="configuracion" class="content-section">
+                <!-- Sección General -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Configuración General</h2>
+                    </div>
+                    <form class="config-form">
+                        <div class="form-group">
+                            <label for="hora-cierre">Hora de Cierre Diario</label>
+                            <input type="time" id="hora-cierre" value="23:00">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre-restaurante">Nombre del Restaurante</label>
+                            <input type="text" id="nombre-restaurante" value="Mi Restaurante">
+                        </div>
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-cancel">
+                                <i class="fas fa-times"></i> Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sección Impresión -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Configuración de Impresión</h2>
+                    </div>
+                    <form class="config-form">
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="print-cocina" checked>
+                                <span class="checkmark"></span>
+                                Impresión a Cocina
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="print-bar" checked>
+                                <span class="checkmark"></span>
+                                Impresión a Bar
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="impresora">Impresora Predeterminada</label>
+                            <select id="impresora">
+                                <option value="imp1">Impresora Cocina 1</option>
+                                <option value="imp2">Impresora Bar</option>
+                                <option value="imp3">Impresora Principal</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline">
+                                <i class="fas fa-print"></i> Probar Impresión
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sección Seguridad -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Configuración de Seguridad</h2>
+                    </div>
+                    <form class="config-form">
+                        <div class="form-group">
+                            <label for="tiempo-sesion">Tiempo de inactividad (minutos)</label>
+                            <input type="number" id="tiempo-sesion" value="30" min="5" max="120">
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="reinicio-sesion">
+                                <span class="checkmark"></span>
+                                Requerir reinicio de sesión después de cambios
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-cancel">
+                                <i class="fas fa-times"></i> Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sección Backup -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Configuración de Backup</h2>
+                    </div>
+                    <form class="config-form">
+                        <div class="form-group">
+                            <label for="frecuencia-backup">Frecuencia de backup</label>
+                            <select id="frecuencia-backup">
+                                <option value="diario">Diario</option>
+                                <option value="semanal" selected>Semanal</option>
+                                <option value="mensual">Mensual</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ubicacion-backup">Ubicación del backup</label>
+                            <input type="text" id="ubicacion-backup" value="/backups/restaurante">
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">
+                                <i class="fas fa-database"></i> Realizar Backup Ahora
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <i class="fas fa-history"></i> Restaurar Backup
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Script para manejar la navegación entre secciones
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ocultar todas las secciones excepto la activa al cargar la página
+            document.querySelectorAll('.content-section').forEach(section => {
+                if (!section.classList.contains('active')) {
+                    section.style.display = 'none';
+                }
+            });
+            
+            // Manejar clics en los items del menú
+            document.querySelectorAll('.sidebar-menu .menu-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    // Remover clase active de todos los items del menú
+                    document.querySelectorAll('.sidebar-menu .menu-item').forEach(menuItem => {
+                        menuItem.classList.remove('active');
+                    });
+                    
+                    // Agregar clase active al item clickeado
+                    item.classList.add('active');
+                    
+                    // Ocultar todas las secciones
+                    document.querySelectorAll('.content-section').forEach(section => {
+                        section.style.display = 'none';
+                        section.classList.remove('active');
+                    });
+                    
+                    // Mostrar la sección correspondiente
+                    const sectionId = item.getAttribute('data-section');
+                    const targetSection = document.getElementById(sectionId);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                        targetSection.classList.add('active');
+                    }
+                    
+                    // Actualizar el título de la página
+                    document.querySelector('.page-title').textContent = item.textContent;
+                });
+            });
+
+            // Script para manejar la navegación entre categorías de productos
+            document.querySelectorAll('.category-nav button').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remover clase active de todos los botones
+                    document.querySelectorAll('.category-nav button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Agregar clase active al botón clickeado
+                    button.classList.add('active');
+                    
+                    // Ocultar todas las secciones
+                    document.querySelectorAll('.category-section').forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    
+                    // Mostrar la sección correspondiente
+                    const category = button.getAttribute('data-category');
+                    document.getElementById(category).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

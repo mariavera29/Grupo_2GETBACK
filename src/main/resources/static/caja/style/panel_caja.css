@@ -1,0 +1,1248 @@
+:root {
+    --color-primario: #701BA4;
+    --color-primario-claro: #8d3bc5;
+    --color-primario-oscuro: #4d1373;
+    --color-secundario: #424242;
+    --color-accento: #1AA1A3;
+    --color-fondo: #121212;
+    --color-superficie: #1E1E1E;
+    --color-texto-primario: #E0E0E0;
+    --color-texto-secundario: #A0A0A0;
+    --color-exito: #2EA31A;
+    --color-error: #F44336;
+    --color-advertencia: #FF9800;
+    --color-info: #2196F3;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-primario);
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Barra lateral */
+.barra-lateral {
+    width: 280px;
+    background-color: var(--color-superficie);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cabecera-barra {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.logo-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-titulo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cabecera-barra h2 {
+    margin: 0;
+    color: var(--color-primario);
+    font-size: 22px;
+}
+
+.cabecera-barra p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: var(--color-texto-secundario);
+}
+
+.menu-navegacion {
+    flex: 1;
+    padding: 20px 0;
+    overflow-y: auto;
+}
+
+.item-menu {
+    padding: 12px 25px;
+    color: var(--color-texto-primario);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.item-menu:hover,
+.item-menu.activo,
+.seccion-contenido:target~.contenido-principal .item-menu[href="#inicio-caja"],
+.seccion-contenido:target~.contenido-principal .item-menu[href="#inicio-caja"]:hover {
+    background-color: rgba(112, 27, 164, 0.2);
+    border-left: 4px solid var(--color-primario);
+    color: white;
+}
+
+.item-menu i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.pie-barra {
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-usuario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.info-usuario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info-usuario span {
+    font-size: 14px;
+}
+
+.estado-conexion {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--color-texto-secundario);
+}
+
+.conexion-activa {
+    color: var(--color-exito);
+    font-size: 8px;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: var(--color-fondo);
+}
+
+.seccion-contenido {
+    display: none;
+}
+
+.seccion-contenido.visible,
+.seccion-contenido:target {
+    display: block;
+}
+
+.cabecera-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cabecera-seccion h1 {
+    margin: 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.acciones-cabecera {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.info-caja {
+    background-color: rgba(112, 27, 164, 0.1);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-caja i {
+    color: var(--color-primario);
+    font-size: 10px;
+}
+
+/* Tarjetas */
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background-color: var(--color-superficie);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cabecera-tarjeta {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cabecera-tarjeta h3 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cuerpo-tarjeta {
+    padding: 20px;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+}
+
+.item-info:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.etiqueta-info {
+    font-weight: 500;
+    color: var(--color-texto-secundario);
+}
+
+.valor-info {
+    font-weight: 500;
+}
+
+.item-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.item-total.total-general {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+}
+
+.etiqueta-total {
+    font-weight: 500;
+}
+
+.valor-total {
+    font-weight: 600;
+    color: var(--color-primario);
+}
+
+.total-general .valor-total {
+    font-size: 18px;
+}
+
+/* Badges de estado */
+.badge-estado {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.badge-pendiente {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: var(--color-error);
+}
+
+.badge-abierta {
+    background-color: rgba(33, 150, 243, 0.2);
+    color: var(--color-info);
+}
+
+.badge-preparacion {
+    background-color: rgba(255, 152, 0, 0.2);
+    color: var(--color-advertencia);
+}
+
+.badge-completado {
+    background-color: rgba(46, 163, 26, 0.2);
+    color: var(--color-exito);
+}
+
+/* Formularios */
+.formulario {
+    width: 100%;
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--color-texto-secundario);
+}
+
+.control-formulario {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--color-fondo);
+    color: var(--color-texto-primario);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.control-formulario:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 2px rgba(112, 27, 164, 0.2);
+}
+
+textarea.control-formulario {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.acciones-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Botones */
+.boton {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.boton-primario {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.boton-primario:hover {
+    background-color: var(--color-primario-claro);
+}
+
+.boton-secundario {
+    background-color: transparent;
+    border: 1px solid var(--color-primario);
+    color: var(--color-primario);
+}
+
+.boton-secundario:hover {
+    background-color: rgba(112, 27, 164, 0.1);
+}
+
+.boton-pequeno {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.boton-icono {
+    background: none;
+    border: none;
+    color: var(--color-texto-primario);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.boton-icono:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Punto de venta */
+.contenedor-pos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.panel-productos {
+    background-color: var(--color-superficie);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: fit-content;
+}
+
+.busqueda-productos {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.busqueda-productos input {
+    flex: 1;
+}
+
+.filtros-categoria {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.filtro-categoria {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--color-texto-primario);
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.filtro-categoria:hover {
+    background-color: rgba(112, 27, 164, 0.1);
+}
+
+.filtro-categoria.activo {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.tarjeta-producto {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.tarjeta-producto:hover {
+    background-color: rgba(112, 27, 164, 0.1);
+    transform: translateY(-2px);
+}
+
+.imagen-producto {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.nombre-producto {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.precio-producto {
+    font-weight: 600;
+    color: var(--color-primario);
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.stock-producto {
+    font-size: 12px;
+    color: var(--color-accento);
+}
+
+.panel-carrito {
+    background-color: var(--color-superficie);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.cabecera-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cabecera-carrito h3 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.items-carrito {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item-carrito:last-child {
+    border-bottom: none;
+}
+
+.nombre-item {
+    flex: 2;
+    font-size: 15px;
+}
+
+.cantidad-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.boton-cantidad {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--color-primario);
+    color: var(--color-primario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.boton-cantidad:hover {
+    background-color: rgba(112, 27, 164, 0.1);
+}
+
+.precio-item {
+    flex: 1;
+    text-align: right;
+    font-weight: 500;
+}
+
+.boton-eliminar {
+    color: var(--color-error);
+    margin-left: 15px;
+    cursor: pointer;
+    width: 20px;
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.total-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-top: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.metodos-pago {
+    margin-top: 10px;
+}
+
+.pestanas-pago {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.pestana-pago {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--color-texto-primario);
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+.pestana-pago:hover {
+    background-color: rgba(112, 27, 164, 0.1);
+}
+
+.pestana-pago.activo {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.detalles-pago {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.acciones-carrito {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Pedidos */
+.grid-pedidos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta-pedido {
+    background-color: var(--color-superficie);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta-pedido:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cabecera-pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cabecera-pedido h3 {
+    margin: 0;
+    color: var(--color-primario);
+}
+
+.info-pedido {
+    margin-bottom: 15px;
+}
+
+.info-pedido p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.items-pedido {
+    margin-bottom: 15px;
+}
+
+.items-pedido ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.items-pedido li {
+    margin-bottom: 5px;
+}
+
+.total-pedido {
+    margin: 15px 0;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.acciones-pedido {
+    display: flex;
+    gap: 10px;
+}
+
+/* Historial */
+.filtros-historial {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-end;
+}
+
+.grupo-filtro {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.grupo-filtro label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--color-texto-secundario);
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.tabla-historial {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-historial th {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.tabla-historial td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+.tabla-historial tr:hover {
+    background-color: rgba(112, 27, 164, 0.1);
+}
+
+.acciones-tabla {
+    display: flex;
+    gap: 5px;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.boton-paginacion {
+    padding: 8px 12px;
+    border: none;
+    background-color: var(--color-superficie);
+    color: var(--color-texto-primario);
+    cursor: pointer;
+    border-radius: 4px;
+    min-width: 40px;
+}
+
+.boton-paginacion:hover {
+    background-color: rgba(112, 27, 164, 0.2);
+}
+
+.boton-paginacion.activo {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.boton-paginacion:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Configuración */
+.pestanas-configuracion {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+.pestana-config {
+    padding: 10px 20px;
+    border-radius: 4px 4px 0 0;
+    border: none;
+    background-color: transparent;
+    color: var(--color-texto-primario);
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    bottom: -1px;
+    text-decoration: none;
+}
+
+.pestana-config:hover {
+    background-color: rgba(112, 27, 164, 0.1);
+}
+
+.pestana-config.activo {
+    background-color: var(--color-primario);
+    color: white;
+    border-bottom: 2px solid var(--color-primario);
+}
+
+.paneles-configuracion {
+    position: relative;
+}
+
+.panel-config {
+    display: none;
+    padding: 20px;
+    background-color: var(--color-superficie);
+    border-radius: 0 8px 8px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.panel-config.visible {
+    display: block;
+}
+
+/* Modal Detalle Pedido */
+.detalle-pedido {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.detalle-pedido:target {
+    display: block;
+}
+
+.contenido-detalle {
+    background: var(--color-superficie);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.cabecera-detalle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #1AA1A3;;
+}
+
+.boton-cerrar {
+    font-size: 24px;
+    color: var(--color-texto-secundario);
+    text-decoration: none;
+}
+
+.tabla-detalle {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tabla-detalle th, .tabla-detalle td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.total-detalle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.acciones-detalle {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.item-detalle {
+    background-color: var(--surface);
+    padding: 10px;
+    color: var(--text-secondary);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.item-detalle strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+
+}
+
+.info-detalle {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.tabla-color{
+       background-color:#701BA4;
+        padding: 10px;
+           color: var(--text-secondary);
+         border-radius: 4px;
+         border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Estilos para la sección de inicio de caja dinámica */
+#inicio-caja .tarjeta:first-child .valor-info[data-hora]::after {
+    content: attr(data-hora);
+}
+
+#inicio-caja form:valid~.tarjeta:first-child .valor-info[data-hora]::after {
+    content: attr(data-hora-actual);
+}
+
+#inicio-caja form:valid~.tarjeta:first-child .badge-estado {
+    background-color: rgba(33, 150, 243, 0.2);
+    color: var(--color-info);
+}
+
+#inicio-caja form:valid~.tarjeta:first-child .badge-estado::before {
+    content: "Abierta";
+}
+
+/* Placeholder para gráficos */
+.placeholder-grafico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    color: var(--color-texto-secundario);
+}
+
+.placeholder-grafico i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--color-primario);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .contenedor-pos {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-carrito {
+        position: static;
+    }
+}
+
+@media (max-width: 992px) {
+    .barra-lateral {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-principal {
+        flex-direction: column;
+    }
+
+    .barra-lateral {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecera-seccion {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .acciones-cabecera {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .filtros-historial {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .grupo-filtro {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .contenido-principal {
+        padding: 15px;
+    }
+
+    .grid-productos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .acciones-carrito {
+        flex-direction: column;
+    }
+
+    .acciones-formulario {
+        flex-direction: column;
+    }
+
+    .boton {
+        width: 100%;
+    }
+}
+
+/* Sistema de navegación mejorado */
+.seccion-contenido {
+    display: none;
+}
+
+/* Regla más específica para asegurar que funcione */
+.contenido-principal>.seccion-contenido.visible,
+.contenido-principal>.seccion-contenido:target {
+    display: block;
+}
+
+/* Oculta todas las secciones cuando otra está activa */
+.contenido-principal>.seccion-contenido:target~.seccion-contenido {
+    display: none;
+}
+
+/* Actualiza el menú activo */
+.barra-lateral .item-menu.activo {
+    background-color: rgba(112, 27, 164, 0.2);
+    border-left: 4px solid var(--color-primario);
+    color: white;
+}
+
+.barra-lateral .item-menu.activo:hover {
+    background-color: rgba(112, 27, 164, 0.3);
+}
+
+
+
+/* Corrección general para tablas en tarjetas */
+.tarjeta table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* Fuerza a que las columnas se ajusten al ancho */
+}
+
+.tarjeta th, .tarjeta td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    word-wrap: break-word;
+    /* Permite que el texto largo se divida */
+}
+
+/* Ajuste específico para tabla de turnos */
+.tabla-turnos th:nth-child(1),
+.tabla-turnos td:nth-child(1) {
+    width: 20%;
+}
+
+.tabla-turnos th:nth-child(2),
+.tabla-turnos td:nth-child(2) {
+    width: 15%;
+}
+
+.tabla-turnos th:nth-child(3),
+.tabla-turnos td:nth-child(3) {
+    width: 15%;
+}
+
+.tabla-turnos th:nth-child(4),
+.tabla-turnos td:nth-child(4),
+.tabla-turnos th:nth-child(5),
+.tabla-turnos td:nth-child(5) {
+    width: 15%;
+}
+
+.tabla-turnos th:nth-child(6),
+.tabla-turnos td:nth-child(6) {
+    width: 20%;
+}
+
+/* Ajuste para tablas con muchas columnas */
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-bottom: 15px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Mejora para el scroll horizontal en móviles */
+@media (max-width: 768px) {
+    .tabla-contenedor {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+}
+
+/* Ajuste para el contenido de las tarjetas */
+.cuerpo-tarjeta {
+    padding: 15px;
+    overflow: hidden;
+    /* Evita que el contenido se salga */
+}
+
+/* Estilo para celdas con contenido largo */
+.tarjeta td {
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tarjeta td:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* Ajuste para grids dentro de tarjetas */
+.grid-combos, .grid-plantillas, .grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Mejora para tarjetas pequeñas */
+.tarjeta-combo, .plantilla-venta {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Ajuste responsive para tablas */
+@media (max-width: 992px) {
+    .tarjeta table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .tarjeta th, .tarjeta td {
+        min-width: 120px;
+    }
+}
+
+/* Corrección para el texto en badges */
+.badge-estado {
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Ajuste para formularios en tarjetas */
+.tarjeta .formulario .grupo-formulario {
+    margin-bottom: 15px;
+}
+
+.tarjeta .control-formulario {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mejora para las acciones en tarjetas */
+.acciones-formulario, .acciones-pedido, .acciones-combo {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Ajuste para el contenedor principal de tarjetas */
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+}
