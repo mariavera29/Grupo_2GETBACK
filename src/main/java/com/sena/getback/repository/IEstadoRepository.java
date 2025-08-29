@@ -9,5 +9,6 @@ import com.sena.getback.model.Estado;
 public interface IEstadoRepository extends JpaRepository<Estado, Integer> {
     
     Optional<Estado> findByNombreEstado(String nombreEstado);
+    
 
 }

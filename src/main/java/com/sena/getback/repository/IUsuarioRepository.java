@@ -12,4 +12,7 @@ public interface IUsuarioRepository extends JpaRepository<Usuario, Integer> {
     
     Optional<Usuario> findByTelefono(String telefono);
     
+    Optional<Usuario> findById(Integer id);
+    
+    
 }

@@ -12,4 +12,6 @@ public interface IInventarioRepository extends JpaRepository<Inventario, Integer
     
     Optional<Inventario> findByRecibo(String recibo);
     
+    Optional<Inventario> findByPrecio_compra(Double precio_compra);
+    
 }
