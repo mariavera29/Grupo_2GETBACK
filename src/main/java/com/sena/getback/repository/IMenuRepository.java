@@ -12,4 +12,10 @@ public interface IMenuRepository extends JpaRepository<Menu, Integer> {
     
     Optional<Menu> findByCombo(String combo);
     
+    Optional<Menu> findByDescripcion(String descripcion);
+    
+    Optional<Menu> findByCantidad(Integer cantidad);
+    
+    
+    
 }
